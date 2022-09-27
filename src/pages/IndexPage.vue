@@ -1,17 +1,24 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+  <q-page>
+    <SearchComp />
+    <ResultCards />
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-
+import SearchComp from 'src/components/SearchComp.vue';
+import ResultCards from 'src/components/ResultCards.vue';
 export default defineComponent({
+  components:{
+    SearchComp,
+    ResultCards
+},
   name: 'IndexPage'
 })
 </script>
+<style>
+body{
+  background-color: #0F172A;
+}
+</style>
